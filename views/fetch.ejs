@@ -1,0 +1,47 @@
+
+<!-- var express = require('express');  
+var app=express();  
+  
+app.get('/get_example3', function (req, res) {  
+res.send('<p>Firstname: ' + req.query['firstname']+'</p>  
+<p>Lastname: '+req.query['lastname']+'</p><p>Password: '+req.query['password']+'</p>  
+<p>AboutYou: '+req.query['aboutyou']+'</p>');  
+})   -->
+
+<%- include("header"); %>
+
+
+
+
+
+
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th >Sr No.</th>
+        <th >Name</th>
+        <th >Email</th>
+        <th >Mobile</th>
+      </tr> 
+    </thead>
+    <tbody>
+        <%userlist.forEach((register,i) => {%>
+
+      <tr>
+        <th ><%= i+1 %></th>
+        <td><%= register.name %></td>
+        <td><%= register.email %></td>
+        <td><%= register.mobile %></td>
+        <td>
+          <a href="/deleteUser/<%= register._id%>"><button class="btn btn-danger">Delete</button></a>
+          <a href="/updateUser/<%= register._id%>"><button class="btn btn-warning">Update</button></a>
+        </td>
+      </tr>
+      <%})%>
+
+    </tbody>
+  </table>
+
+    <%- include("footer"); %>
+

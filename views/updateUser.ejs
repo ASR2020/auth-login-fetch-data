@@ -1,0 +1,28 @@
+<%- include("header"); %>
+<h1>Update Here Page</h1>
+<form method="post">
+    <div class="form-group">
+      <label for="email">Name:</label>
+      <input type="text" class="form-control" name="name" value="<%=user.name%>">
+    </div>
+    <div class="form-group">
+      <label for="email">mobile</label>
+      <input type="number" class="form-control" name="mobile" value="<%=user.mobile%>">
+    </div>
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" name="email" value="<%=user.email%>">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="password" value="<%=user.password%>">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+   
+ 
+
+
+    <%- include("footer"); %>
+
